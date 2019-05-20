@@ -94,7 +94,7 @@ def parse(String description) {
 	} else if (description == "updated") {
 		return null
 	} else {
-		def cmd = zwave.parse(description, [ 0x98: 1, 0x72: 2, 0x85: 2, 0x86: 1 ])
+		def cmd = zwave.parse(description, [ 0x98: 1, 0x72: 2, 0x85: 2, 0x86: 1, 0x62: 1, 0x71: 2, 0x80: 1, 0x63: 1])
 		if (cmd) {
 			result = zwaveEvent(cmd)
 		}
